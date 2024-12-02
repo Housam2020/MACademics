@@ -1,18 +1,33 @@
-import React from "react";
-import SearchFilter from "../components/SearchFilter";
+// SearchFilter.js
+import React, { useState } from "react";
 
-const Search = () => {
-  const handleSearch = (query, filters) => {
-    console.log("Search Query:", query);
-    console.log("Filters:", filters);
-    // Implement search logic here
+const SearchFilter = ({ onSearch }) => {
+  const [query, setQuery] = useState("");
+  const [filters, setFilters] = useState({});
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSearch(query, filters);
   };
 
   return (
-    <div className="p-4">
-      <SearchFilter onSearch={handleSearch} />
-    </div>
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <input
+        type="text"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder="Search..."
+        className="w-full p-2 border border-gray-300 rounded"
+      />
+      {/* Add filter inputs as needed */}
+      <button
+        type="submit"
+        className="px-4 py-2 bg-blue-500 text-white rounded"
+      >
+        Search
+      </button>
+    </form>
   );
 };
 
-export default Search;
+export default SearchFilter;
