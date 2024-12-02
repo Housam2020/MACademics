@@ -81,7 +81,7 @@ const Reviews = () => {
       </div>
       <button
         onClick={() => setIsModalOpen(true)}
-        className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300"
+        className="bg-primary text-white py-2 px-4 rounded-md hover:bg-red-700 transition duration-300"
       >
         Add Review
       </button>
@@ -155,7 +155,7 @@ const Reviews = () => {
                 </button>
                 <button
                   type="submit"
-                  className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300"
+                  className="bg-primary text-white py-2 px-4 rounded-md hover:bg-red-700 transition duration-300"
                 >
                   Add Review
                 </button>
@@ -165,7 +165,6 @@ const Reviews = () => {
         </div>
       )}
 
-      {/* Recommendations Section */}
       <div className="mt-12 pt-8 border-t border-gray-300">
         <PageTitle>Recommended for You</PageTitle>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
