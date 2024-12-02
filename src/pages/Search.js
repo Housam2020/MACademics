@@ -27,7 +27,7 @@ const Search = () => {
     <div className="p-4">
       <PageTitle>Search</PageTitle>
       <SearchFilter onSearch={handleSearch} />
-      <div className="mt-4">
+      <div className="mt-4 grid grid-cols-1 gap-4">
         {results.map((place, index) => (
           <StudyPlaceCard key={index} place={place} />
         ))}
