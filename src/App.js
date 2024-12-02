@@ -6,6 +6,7 @@ import Recommendations from "./pages/Recommendations";
 import Search from "./pages/Search";
 import Reviews from "./pages/Reviews";
 import StudyPlaceDetails from "./pages/StudyPlaceDetails";
+import AccountSettings from "./pages/AccountSettings";
 import Navbar from "./components/Navbar";
 import TopNavBar from "./components/TopNavBar";
 
@@ -25,6 +26,7 @@ const App = () => {
             <Route path="/reviews" element={<Reviews />} />
             <Route path="/recommendations" element={<Recommendations />} />
             <Route path="/study-place/:id" element={<StudyPlaceDetails />} />
+            <Route path="/account-settings" element={<AccountSettings />} />
           </Routes>
         </div>
 
