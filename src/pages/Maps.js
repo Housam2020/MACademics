@@ -18,20 +18,6 @@ const Maps = () => {
           alt="Map showing study places"
           className="w-full h-full object-cover rounded-lg"
         />
-        {studySpots.map((spot, index) => (
-          <div
-            key={index}
-            className="absolute"
-            style={{ top: `${spot.mapTop}%`, left: `${spot.mapLeft}%` }}
-            onClick={() => setSelectedPlace(spot)}
-          >
-            <FontAwesomeIcon
-              icon={faMapMarkerAlt}
-              className="text-red-500 text-5xl cursor-pointer"
-              title={spot.name}
-            />
-          </div>
-        ))}
         <StudyPlaceMarker
           place={studySpots.find(spot => spot.id === 2)}
           top="50%"

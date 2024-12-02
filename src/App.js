@@ -12,12 +12,9 @@ import TopNavBar from "./components/TopNavBar";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="flex flex-col min-h-screen bg-gray-100">
-        {/* Top Navbar */}
         <TopNavBar />
-
-        {/* Main Content */}
         <div className="flex-grow p-4">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -29,8 +26,6 @@ const App = () => {
             <Route path="/maps" element={<Maps />} />
           </Routes>
         </div>
-
-        {/* Bottom Navbar */}
         <Navbar />
       </div>
     </Router>
