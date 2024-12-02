@@ -58,7 +58,7 @@ const Navbar = () => {
         }
       >
         <FontAwesomeIcon icon={faThumbsUp} className="text-2xl" />
-        <span>Recommended</span>
+        <span>Suggest</span>
       </NavLink>
     </nav>
   );

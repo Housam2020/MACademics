@@ -61,6 +61,8 @@ const Home = () => {
     }
   };
 
+  const buttonClass = "text-white p-4 rounded-lg shadow-md w-full h-20 flex items-center justify-center";
+
   return (
     <div className={`p-4 ${bgColor}`}>
       <h1 className="text-3xl font-bold mb-4">Welcome to Campus Spaces</h1>
@@ -77,31 +79,31 @@ const Home = () => {
         <div className="grid grid-cols-2 gap-4 mb-6">
           <button
             onClick={() => filterByCategory("Quiet", "bg-blue-100")}
-            className="bg-blue-500 text-white p-4 rounded-lg shadow-md"
+            className={`bg-blue-500 ${buttonClass}`}
           >
             <p className="text-lg font-medium">Quiet Places</p>
           </button>
           <button
             onClick={() => filterByCategory("Outdoor", "bg-green-100")}
-            className="bg-green-500 text-white p-4 rounded-lg shadow-md"
+            className={`bg-green-500 ${buttonClass}`}
           >
             <p className="text-lg font-medium">Outdoor Spaces</p>
           </button>
           <button
             onClick={() => filterByCategory("Close to Food", "bg-yellow-100")}
-            className="bg-yellow-500 text-white p-4 rounded-lg shadow-md"
+            className={`bg-yellow-500 ${buttonClass}`}
           >
             <p className="text-lg font-medium">Close to Food</p>
           </button>
           <button
             onClick={() => filterByCategory("Collaborative", "bg-purple-100")}
-            className="bg-purple-500 text-white p-4 rounded-lg shadow-md"
+            className={`bg-purple-500 ${buttonClass}`}
           >
             <p className="text-lg font-medium">Collaborative Areas</p>
           </button>
           <button
             onClick={() => filterByCategory("All", "bg-gray-100")}
-            className="bg-gray-500 text-white p-4 rounded-lg shadow-md col-span-2"
+            className={`bg-gray-500 ${buttonClass} col-span-2`}
           >
             <p className="text-lg font-medium">Show All</p>
           </button>
