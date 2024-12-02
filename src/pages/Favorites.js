@@ -1,28 +1,12 @@
 import React, { useState } from "react";
 import StudyPlaceCard from "../components/StudyPlaceCard";
+import studySpots from "../data/studySpots";
 
 const Favorites = () => {
   const [activeTab, setActiveTab] = useState("favorites");
 
-  const favorites = [
-    {
-      name: "Library - Silent Zone",
-      description: "A peaceful spot for individual study.",
-      noiseLevel: "Quiet",
-      proximityToFood: "Far",
-      image: "https://via.placeholder.com/300x200",
-    },
-  ];
-
-  const visited = [
-    {
-      name: "Outdoor Patio",
-      description: "Great for group discussions.",
-      noiseLevel: "Moderate",
-      proximityToFood: "Close",
-      image: "https://via.placeholder.com/300x200",
-    },
-  ];
+  const favorites = studySpots.filter(place => place.name.includes("Silent Zone"));
+  const visited = studySpots.filter(place => place.name.includes("Patio"));
 
   const placesToShow = activeTab === "favorites" ? favorites : visited;
 

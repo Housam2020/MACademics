@@ -18,6 +18,7 @@ const App = () => {
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/recommendations" element={<Recommendations />} />
+          
         </Routes>
 
         {/* Navbar */}

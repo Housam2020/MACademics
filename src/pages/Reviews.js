@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import studySpots from "../data/studySpots";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([
@@ -6,11 +7,13 @@ const Reviews = () => {
       user: "John Doe",
       rating: 5,
       comment: "Great spot for quiet studying.",
+      place: studySpots[0],
     },
     {
       user: "Jane Smith",
       rating: 4,
       comment: "Nice place, but a bit crowded during lunch hours.",
+      place: studySpots[1],
     },
   ]);
 
@@ -20,6 +23,7 @@ const Reviews = () => {
       user: "New User",
       rating: 4,
       comment: "Very comfortable seating.",
+      place: studySpots[2],
     };
     setReviews((prevReviews) => [...prevReviews, newReview]);
   };
@@ -39,6 +43,7 @@ const Reviews = () => {
               {"☆".repeat(5 - review.rating)}
             </p>
             <p className="text-gray-700">{review.comment}</p>
+            <p className="text-gray-500 text-sm">{review.place.name}</p>
           </div>
         ))}
       </div>

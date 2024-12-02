@@ -1,44 +1,9 @@
 import React, { useMemo, useState } from "react";
 import StudyPlaceCard from "../components/StudyPlaceCard";
+import studySpots from "../data/studySpots";
 
 const Home = () => {
-  const studyPlaces = useMemo(() => [
-    {
-      name: "Library - Quiet Zone",
-      description: "Perfect for deep focus and studying alone.",
-      noiseLevel: "Quiet",
-      proximityToFood: "Moderate",
-      image: "https://via.placeholder.com/300x200",
-    },
-    {
-      name: "Campus Cafe",
-      description: "Lively environment with great coffee options.",
-      noiseLevel: "Moderate",
-      proximityToFood: "Close",
-      image: "https://via.placeholder.com/300x200",
-    },
-    {
-      name: "Outdoor Patio",
-      description: "A refreshing outdoor environment for collaborative work.",
-      noiseLevel: "Moderate",
-      proximityToFood: "Close",
-      image: "https://via.placeholder.com/300x200",
-    },
-    {
-      name: "Study Hall",
-      description: "Spacious hall with individual desks.",
-      noiseLevel: "Quiet",
-      proximityToFood: "Far",
-      image: "https://via.placeholder.com/300x200",
-    },
-    {
-      name: "Library - Group Study",
-      description: "Ideal for group discussions and collaborative work.",
-      noiseLevel: "Moderate",
-      proximityToFood: "Moderate",
-      image: "https://via.placeholder.com/300x200",
-    },
-  ], []);
+  const studyPlaces = useMemo(() => studySpots, []);
 
   const [filteredPlaces, setFilteredPlaces] = useState(studyPlaces);
   const [selectedCategory, setSelectedCategory] = useState("All");

@@ -1,7 +1,7 @@
-// Search.js
 import React, { useState } from "react";
 import SearchFilter from "../components/SearchFilter";
 import StudyPlaceCard from "../components/StudyPlaceCard";
+import studySpots from "../data/studySpots";
 
 const Search = () => {
   const [results, setResults] = useState([]);
@@ -10,17 +10,16 @@ const Search = () => {
     console.log("Search Query:", query);
     console.log("Filters:", filters);
 
-    // Example mock data for search results
-    const mockResults = [
-      {
-        name: "Quiet Library",
-        description: "Ideal for uninterrupted focus.",
-        noiseLevel: "Quiet",
-        proximityToFood: "Moderate",
-        image: "https://via.placeholder.com/300x200",
-      },
-    ];
-    setResults(mockResults);
+    // Filter studySpots based on query and filters
+    const filteredResults = studySpots.filter(place => {
+      return (
+        place.name.toLowerCase().includes(query.toLowerCase()) &&
+        (filters.noiseLevel ? place.noiseLevel === filters.noiseLevel : true) &&
+        (filters.proximityToFood ? place.proximityToFood === filters.proximityToFood : true)
+      );
+    });
+
+    setResults(filteredResults);
   };
 
   return (

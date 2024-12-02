@@ -1,23 +1,9 @@
 import React from "react";
 import StudyPlaceCard from "../components/StudyPlaceCard";
+import studySpots from "../data/studySpots";
 
 const Recommendations = () => {
-  const recommendations = [
-    {
-      name: "Sunny Lounge",
-      description: "Bright spot for relaxing study sessions.",
-      noiseLevel: "Moderate",
-      proximityToFood: "Close",
-      image: "https://via.placeholder.com/300x200",
-    },
-    {
-      name: "Quiet Garden",
-      description: "Serene outdoor area for focus.",
-      noiseLevel: "Quiet",
-      proximityToFood: "Far",
-      image: "https://via.placeholder.com/300x200",
-    },
-  ];
+  const recommendations = studySpots.filter(place => place.noiseLevel === "Moderate");
 
   return (
     <div className="p-4">
