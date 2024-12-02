@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import studySpots from "../data/studySpots";
 import PageTitle from "../components/PageTitle";
+import StudyPlaceCard from "../components/StudyPlaceCard";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([
@@ -56,6 +57,8 @@ const Reviews = () => {
     });
     setIsModalOpen(false);
   };
+
+  const recommendations = studySpots.filter(place => place.noiseLevel === "Moderate");
 
   return (
     <div className="p-4">
@@ -161,6 +164,16 @@ const Reviews = () => {
           </div>
         </div>
       )}
+
+      {/* Recommendations Section */}
+      <div className="mt-12 pt-8 border-t border-gray-300">
+        <PageTitle>Recommended for You</PageTitle>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+          {recommendations.map((place, index) => (
+            <StudyPlaceCard key={index} place={place} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

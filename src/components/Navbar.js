@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faSearch, faHeart, faStar, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faSearch, faHeart, faStar, faMap } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const baseClass =
@@ -52,13 +52,13 @@ const Navbar = () => {
       </NavLink>
 
       <NavLink
-        to="/recommendations"
+        to="/maps"
         className={({ isActive }) =>
           `${baseClass} ${isActive ? activeClass : inactiveClass}`
         }
       >
-        <FontAwesomeIcon icon={faThumbsUp} className="text-2xl" />
-        <span>Suggest</span>
+        <FontAwesomeIcon icon={faMap} className="text-2xl" />
+        <span>Maps</span>
       </NavLink>
     </nav>
   );

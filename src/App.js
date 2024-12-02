@@ -2,11 +2,11 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Favorites from "./pages/Favorites";
-import Recommendations from "./pages/Recommendations";
 import Search from "./pages/Search";
 import Reviews from "./pages/Reviews";
 import StudyPlaceDetails from "./pages/StudyPlaceDetails";
 import AccountSettings from "./pages/AccountSettings";
+import Maps from "./pages/Maps";
 import Navbar from "./components/Navbar";
 import TopNavBar from "./components/TopNavBar";
 
@@ -24,9 +24,9 @@ const App = () => {
             <Route path="/search" element={<Search />} />
             <Route path="/favorites" element={<Favorites />} />
             <Route path="/reviews" element={<Reviews />} />
-            <Route path="/recommendations" element={<Recommendations />} />
             <Route path="/study-place/:id" element={<StudyPlaceDetails />} />
             <Route path="/account-settings" element={<AccountSettings />} />
+            <Route path="/maps" element={<Maps />} />
           </Routes>
         </div>
 
