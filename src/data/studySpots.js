@@ -93,6 +93,57 @@ const studySpots = [
           comment: "Nice open space, but can get a bit loud."
         }
       ]
+    },
+    {
+      id: 6,
+      name: "Student Center - Food Court",
+      description: "A bustling area with plenty of food options nearby.",
+      image: "/student-center-food-court.jpg",
+      noiseLevel: "Loud",
+      proximityToFood: "Close",
+      accessibility: "Wheelchair accessible",
+      outlets: "Limited",
+      reviews: [
+        {
+          user: "Chris Red",
+          rating: 3,
+          comment: "Convenient for grabbing a bite, but very noisy."
+        }
+      ]
+    },
+    {
+      id: 7,
+      name: "Outdoor Study Area - North Campus",
+      description: "A peaceful outdoor space with plenty of seating.",
+      image: "/outdoor-study-area-north-campus.jpg",
+      noiseLevel: "Quiet",
+      proximityToFood: "Far",
+      accessibility: "Not wheelchair accessible",
+      outlets: "None",
+      reviews: [
+        {
+          user: "Anna Green",
+          rating: 4,
+          comment: "Great for fresh air and quiet study, but no food nearby."
+        }
+      ]
+    },
+    {
+      id: 8,
+      name: "Engineering Building - Common Area",
+      description: "A lively space for group work and socializing.",
+      image: "/engineering-building-common-area.jpg",
+      noiseLevel: "Loud",
+      proximityToFood: "Moderate",
+      accessibility: "Wheelchair accessible",
+      outlets: "Plenty available",
+      reviews: [
+        {
+          user: "David Black",
+          rating: 4,
+          comment: "Perfect for group projects, but can get very loud."
+        }
+      ]
     }
   ];
   
