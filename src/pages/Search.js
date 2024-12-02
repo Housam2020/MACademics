@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SearchFilter from "../components/SearchFilter";
 import StudyPlaceCard from "../components/StudyPlaceCard";
 import studySpots from "../data/studySpots";
+import PageTitle from "../components/PageTitle";
 
 const Search = () => {
   const [results, setResults] = useState([]);
@@ -24,7 +25,7 @@ const Search = () => {
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Search</h1>
+      <PageTitle>Search</PageTitle>
       <SearchFilter onSearch={handleSearch} />
       <div className="mt-4">
         {results.map((place, index) => (

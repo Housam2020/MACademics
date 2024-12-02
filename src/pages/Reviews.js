@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import studySpots from "../data/studySpots";
+import PageTitle from "../components/PageTitle";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([
@@ -58,7 +59,7 @@ const Reviews = () => {
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Reviews</h1>
+      <PageTitle>Reviews</PageTitle>
       <div className="mb-6">
         {reviews.map((review, index) => (
           <div

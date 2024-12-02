@@ -1,13 +1,14 @@
 import React from "react";
 import StudyPlaceCard from "../components/StudyPlaceCard";
 import studySpots from "../data/studySpots";
+import PageTitle from "../components/PageTitle";
 
 const Recommendations = () => {
   const recommendations = studySpots.filter(place => place.noiseLevel === "Moderate");
 
   return (
     <div className="p-4">
-      <h1 className="text-3xl font-bold mb-4">Recommended for You</h1>
+      <PageTitle>Recommended for You</PageTitle>
 
       {/* Recommendation Cards */}
       {recommendations.map((place, index) => (

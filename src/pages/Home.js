@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from "react";
 import StudyPlaceCard from "../components/StudyPlaceCard";
 import studySpots from "../data/studySpots";
+import PageTitle from "../components/PageTitle";
 
 const Home = () => {
   const studyPlaces = useMemo(() => studySpots, []);
@@ -30,7 +31,7 @@ const Home = () => {
 
   return (
     <div className={`p-4 ${bgColor}`}>
-      <h1 className="text-3xl font-bold mb-4">Welcome to Campus Spaces</h1>
+      <PageTitle>Welcome to Campus Spaces</PageTitle>
 
       {/* Featured Section */}
       <div className="mb-6">
