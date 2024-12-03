@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import StudyPlaceCard from "../components/StudyPlaceCard";
 import studySpots from "../data/studySpots";
 
 const StudyPlaceDetails = ({ place }) => {
   const [visited, setVisited] = useState(false);
+  const [notificationsEnabled, setNotificationsEnabled] = useState(false);
+
+  useEffect(() => {
+    if (place.visited) {
+      setVisited(true);
+    }
+  }, [place]);
 
   if (!place) {
     return <div>Study place not found</div>;
@@ -11,6 +18,11 @@ const StudyPlaceDetails = ({ place }) => {
 
   const handleVisitedClick = () => {
     setVisited(!visited);
+  };
+
+  const handleNotificationsClick = () => {
+    setNotificationsEnabled(!notificationsEnabled);
+    alert(`Notifications ${!notificationsEnabled ? 'enabled' : 'disabled'} for ${place.name}`);
   };
 
   const similarPlaces = studySpots.filter(
@@ -35,6 +47,13 @@ const StudyPlaceDetails = ({ place }) => {
         className={`px-4 py-2 rounded mb-4 ${visited ? "bg-green-500 text-white" : "bg-gray-200"}`}
       >
         {visited ? "Mark as Not Visited" : "Mark as Visited"}
+      </button>
+
+      <button
+        onClick={handleNotificationsClick}
+        className={`px-4 py-2 rounded mb-4 ${notificationsEnabled ? "bg-blue-500 text-white" : "bg-gray-200"}`}
+      >
+        {notificationsEnabled ? "Disable Notifications" : "Enable Notifications"}
       </button>
 
       <h2 className="text-2xl font-semibold mt-6 mb-4">Reviews</h2>
