@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/macademics/static/css/main.6316ecfb.css",
-    "main.js": "/macademics/static/js/main.d802d153.js",
+    "main.js": "/macademics/static/js/main.cfb66ea8.js",
     "static/js/453.c7d448ed.chunk.js": "/macademics/static/js/453.c7d448ed.chunk.js",
     "index.html": "/macademics/index.html",
     "main.6316ecfb.css.map": "/macademics/static/css/main.6316ecfb.css.map",
-    "main.d802d153.js.map": "/macademics/static/js/main.d802d153.js.map",
+    "main.cfb66ea8.js.map": "/macademics/static/js/main.cfb66ea8.js.map",
     "453.c7d448ed.chunk.js.map": "/macademics/static/js/453.c7d448ed.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6316ecfb.css",
-    "static/js/main.d802d153.js"
+    "static/js/main.cfb66ea8.js"
   ]
 }
