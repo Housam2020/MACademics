@@ -1,5 +1,7 @@
 # Macademics
 
+Live link: https://housam2020.github.io/macademics/
+
 A web application to find and review study spots on campus.
 
 ## Features
