@@ -14,7 +14,7 @@ const Maps = () => {
       <PageTitle>Study Places Nearby</PageTitle>
       <div className="relative mt-6 h-screen">
         <img
-          src="${process.env.PUBLIC_URL}/explore-map.jpg"
+          src={`${process.env.PUBLIC_URL}/explore-map.jpg`}
           alt="Map showing study places"
           className="w-full h-full object-cover rounded-lg"
         />
