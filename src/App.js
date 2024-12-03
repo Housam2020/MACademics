@@ -12,7 +12,7 @@ import TopNavBar from "./components/TopNavBar";
 
 const App = () => {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <div className="flex flex-col min-h-screen bg-gray-100">
         <TopNavBar />
         <div className="flex-grow p-4">
